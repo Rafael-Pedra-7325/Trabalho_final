@@ -1,0 +1,100 @@
+body {
+  cursor: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">\
+<text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="30">🔧</text>\
+</svg>') 32 32, auto;
+}
+
+/*Botao volta ao inicio*/
+.btn-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #e63946;       /* cor de fundo */
+  color: white;              /* cor da seta */
+  font-size: 20px;
+  font-weight: bold;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;        /* formato circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;             /* sempre por cima */
+}
+
+.btn-top:hover {
+  background: #b31d2d;       /* cor mais escura no hover */
+  transform: scale(1.1);     /* aumenta um pouco */
+}
+
+
+/* Header e nav*/
+/* Reset básico para evitar diferenças entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;  /* Logo à esquerda, links à direita */
+  align-items: center;
+  padding: 12px 32px;
+  background-color: #111;          /* cor de fundo do nav */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Logo */
+nav img {
+  border-radius: 8px;              /* opcional: cantos arredondados */
+  transition: transform .3s;
+  background-color: white;
+}
+
+nav img:hover {
+  transform: scale(1.05);          /* leve zoom ao passar o mouse */
+}
+
+/* Container dos links */
+nav span {
+  display: flex;
+  gap: 24px;                       /* espaçamento entre os links */
+}
+
+/* Links */
+.navegador {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  padding: 6px 0;
+  transition: color .3s;
+}
+
+/* Efeito hover: underline animado */
+.navegador::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #e63946;   /* cor destaque */
+  transition: width .3s;
+}
+
+.navegador:hover {
+  color: #e63946;
+}
+
+.navegador:hover::after {
+  width: 100%;
+}
+
+
